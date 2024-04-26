@@ -1,7 +1,7 @@
-export default function appendToEachArrayValue(array, appendString) {
-  for (let value of array) {
-    value = appendString + value;
-  }
+export default function createEmployeesObject(departmentName, employees) {
+  const employeesObj = {
+    [`${departmentName}`]: employees,
+  };
 
-  return array;
+  return employeesObj;
 }

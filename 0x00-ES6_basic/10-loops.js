@@ -1,7 +1,9 @@
-export default function createEmployeesObject(departmentName, employees) {
-  const employeesObj = {
-    [`${departmentName}`]: employees,
-  };
+export default function appendToEachArrayValue(array, appendString) {
+  const newArray = [];
 
-  return employeesObj;
+  for (const elem of array) {
+    newArray.push(appendString + elem);
+  }
+
+  return newArray;
 }

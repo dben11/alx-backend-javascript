@@ -1,7 +1,7 @@
 import getListStudents from "./0-get_list_students";
 
 function getListStudents() {
-  const obji = {
+  const obj1 = {
     id: 1,
     firstName:'Guillaume',
     location:'San Francisco'

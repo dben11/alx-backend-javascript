@@ -1,6 +1,4 @@
-import getListStudents from "./0-get_list_students";
-
-function getListStudents() {
+export default function getListStudents() {
   const obj1 = {
     id: 1,
     firstName:'Guillaume',

@@ -2,19 +2,19 @@ export default function getListStudents() {
   const obj1 = {
     id: 1,
     firstName: 'Guillaume',
-    location: 'San Francisco'
+    location: 'San Francisco',
   };
 
   const obj2 = {
     id: 2,
     firstName: 'Jame',
-    location: 'Columbia'
+    location: 'Columbia',
   };
 
   const obj3 = {
-    id:5,
+    id: 5,
     firstName: 'Serena',
-    location: 'San Francisco'
+    location: 'San Francisco',
   };
   return [obj1, obj2, obj3];
 }

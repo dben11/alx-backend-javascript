@@ -1,5 +1,4 @@
-import getListStudents from './0-get_list_students';
-
+import getListStudents from './0-get_list_students.js';
 export default function getListStudentIds(obj1) {
   if (!Array.isArray(obj1)) {
     return [];

@@ -1,9 +1,15 @@
-//Account Recover
+const sinon = require('sinon');
+const { expect } = require('chai');
 const Utils = require('./utils');
+const sendPaymentRequestToApi = require('./3-payment');
 
-function sendPaymentRequestToApi(totalAmount, totalShipping) {
-  const sum = Utils.calculateNumber('SUM', totalAmount, totalShipping);
-  console.log(`The total is: ${sum}`);
-}
+describe('sendPaymentRequestToApi', () => {
+  it('sendPaymentRequestToApi uses the calculateNumber method of Utils', () => {
+    const bigBrother = sinon.spy(Utils);
 
-module.exports = sendPaymentRequestToApi;
+    sendPaymentRequestToApi(100, 20);
+    expect(bigBrother.calculateNumber.calledWith('SUM', 100, 20)).to.be.true;
+    expect(bigBrother.calculateNumber.callCount).to.be.equal(1);
+    bigBrother.calculateNumber.restore();
+  });
+});

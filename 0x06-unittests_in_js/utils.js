@@ -1,21 +1,20 @@
-// Create utils
 const Utils = {
   calculateNumber(type, a, b) {
-    if (type === 'SUM') {
-      return Math.round(a) + Math.round(b);
-    }
+    const aRound = Math.round(a);
+    const bRound = Math.round(b);
 
     if (type === 'SUBTRACT') {
-      return Math.round(a) - Math.round(b);
+      return aRound - bRound;
     }
 
     if (type === 'DIVIDE') {
-      if (Math.round(b) === 0) {
+      if (bRound === 0) {
         return 'Error';
       }
-      return Math.round(a) / Math.round(b);
+      return aRound / bRound;
     }
-    return 0;
+
+    return aRound + bRound;
   },
 };
 
